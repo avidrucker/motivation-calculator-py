@@ -104,18 +104,18 @@ def normalize_m(m, m_worst, m_best):
     return ((m - m_worst) / (m_best - m_worst)) * 100
 
 # Given worst and best values for M
-m_worst = calc_raw_m('d')
-m_best = calc_raw_m('a')
-m = calc_raw_m()
+m_worst2 = calc_raw_m('d')
+m_best2 = calc_raw_m('a')
+m2 = calc_raw_m()
 
 # Test the function with worst and best values
-normalized_worst = normalize_m(m_worst, m_worst, m_best)
-normalized_best = normalize_m(m_best, m_worst, m_best)
-normalized_m = normalize_m(m)
+normalized_worst = normalize_m(m_worst2, m_worst2, m_best2)
+normalized_best = normalize_m(m_best2, m_worst2, m_best2)
+normalized_m = normalize_m(m2, m_worst2, m_best2)
 
 # Display results
 # print(f"Calculated values:\nE: {E}\nV: {V}\nI: {I}\nD: {D}\nRaw Motivation Score (M): {M}")
-print(f"Raw computed M score: {m}, normalized M score: {normalized_m}")
-print(f"Raw computed worst M score: {m_worst}, normalized worst M score: {normalized_worst}")
-print(f"Raw computed best M score: {m_best}, normalized best M score: {normalized_best}")
+print(f"Raw computed M score: {m2}, normalized M score: {normalized_m}")
+print(f"Raw computed worst M score: {m_worst2}, normalized worst M score: {normalized_worst}")
+print(f"Raw computed best M score: {m_best2}, normalized best M score: {normalized_best}")
 # print(f"Adjusted motivation score (0-100): ...")
